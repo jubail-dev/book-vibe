@@ -1,11 +1,5 @@
-
 import Link from "next/link";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaGithub,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -68,19 +62,13 @@ const Footer = () => {
 
             <ul className="space-y-3 text-sm text-neutral-content/70">
               <li>
-                <Link
-                  href="/"
-                  className="hover:text-primary transition"
-                >
+                <Link href="/" className="hover:text-primary transition">
                   Home
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/books"
-                  className="hover:text-primary transition"
-                >
+                <Link href="/books" className="hover:text-primary transition">
                   Books
                 </Link>
               </li>
@@ -95,10 +83,7 @@ const Footer = () => {
               </li>
 
               <li>
-                <Link
-                  href="/about"
-                  className="hover:text-primary transition"
-                >
+                <Link href="/about" className="hover:text-primary transition">
                   About Us
                 </Link>
               </li>
@@ -111,37 +96,25 @@ const Footer = () => {
 
             <ul className="space-y-3 text-sm text-neutral-content/70">
               <li>
-                <Link
-                  href="#"
-                  className="hover:text-primary transition"
-                >
+                <Link href="#" className="hover:text-primary transition">
                   Help Center
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="#"
-                  className="hover:text-primary transition"
-                >
+                <Link href="#" className="hover:text-primary transition">
                   Privacy Policy
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="#"
-                  className="hover:text-primary transition"
-                >
+                <Link href="#" className="hover:text-primary transition">
                   Terms & Conditions
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="#"
-                  className="hover:text-primary transition"
-                >
+                <Link href="#" className="hover:text-primary transition">
                   Contact Us
                 </Link>
               </li>
@@ -150,9 +123,7 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">
-              Stay Connected
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">Stay Connected</h3>
 
             <p className="text-sm text-neutral-content/70 mb-4">
               Subscribe to get the latest book recommendations and updates.
@@ -165,9 +136,7 @@ const Footer = () => {
                 className="input input-bordered join-item w-full text-base-content"
               />
 
-              <button className="btn btn-primary join-item">
-                Subscribe
-              </button>
+              <button className="btn btn-primary join-item">Subscribe</button>
             </div>
           </div>
         </div>
@@ -179,7 +148,10 @@ const Footer = () => {
           </p>
 
           <p className="text-sm text-neutral-content/60">
-            Made with ❤️ for book lovers
+            A project by{" "}
+            <span className="font-semibold text-neutral-content">
+              JR Jubail
+            </span>
           </p>
         </div>
       </div>
