@@ -71,8 +71,13 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end flex gap-3">
-          <button className="btn btn-success">Sign in</button>
-          <button className="btn btn-active">Sign Up</button>
+          <Link href="/sign-in">
+              <button className="btn btn-success">Sign in</button>
+          </Link>
+          <Link href="/sign-up">
+              <button className="btn btn-active">Sign Up</button>
+          </Link>
+          
         </div>
 
       </div>
