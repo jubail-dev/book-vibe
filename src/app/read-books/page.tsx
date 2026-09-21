@@ -30,12 +30,7 @@ const TriangleBar = (props: BarShapeProps) => {
 
   const color = colors[(index ?? 0) % colors.length];
 
-  const getPath = (
-    x: number,
-    y: number,
-    width: number,
-    height: number
-  ) => {
+  const getPath = (x: number, y: number, width: number, height: number) => {
     return `M${x},${y + height}
       C${x + width / 3},${y + height}
       ${x + width / 2},${y + height / 3}
@@ -49,12 +44,7 @@ const TriangleBar = (props: BarShapeProps) => {
   return (
     <path
       strokeWidth={props.isActive ? 5 : 0}
-      d={getPath(
-        Number(x),
-        Number(y),
-        Number(width),
-        Number(height)
-      )}
+      d={getPath(Number(x), Number(y), Number(width), Number(height))}
       stroke={color}
       fill={color}
       style={{
@@ -92,7 +82,20 @@ const RechartPage = () => {
   return (
     <div className="mx-auto my-5 flex max-w-[1200px] items-center justify-center">
       {readBooks.length === 0 ? (
-        <p>No Read books to display</p>
+        <div className="min-h-[300px] flex flex-col items-center justify-center text-center px-4">
+          <div className="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center mb-5">
+            <span className="text-4xl">📚</span>
+          </div>
+
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+            No Read Books Yet
+          </h2>
+
+          <p className="text-gray-500 max-w-md">
+            You have not added any books to your read list yet. Start exploring
+            and add your favorite books here!
+          </p>
+        </div>
       ) : (
         <BarChart
           style={{
@@ -118,15 +121,8 @@ const RechartPage = () => {
 
           <YAxis width="auto" />
 
-          <Bar
-            dataKey="uv"
-            shape={TriangleBar}
-            activeBar
-          >
-            <LabelList
-              content={CustomColorLabel}
-              position="top"
-            />
+          <Bar dataKey="uv" shape={TriangleBar} activeBar>
+            <LabelList content={CustomColorLabel} position="top" />
           </Bar>
         </BarChart>
       )}
